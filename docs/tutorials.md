@@ -2,7 +2,7 @@
 
 This quick start guide outlines the steps to use the nanoCEM command line for analyzing our example data, which consists
 of the _E. coli_ 23S rRNA around a known m6A site (A2030). nanoCEM will calculate alignment features and current event
-features within this target region.
+features within this target region.test
 
  Our default mode is based on `f5c resquiggle`, so our framework integrated the `f5c` commands.
 In addition, nanoCEM also supports preprocessing result from [`f5c eventalign`](#f5c-eventalign-support), [`tombo`](#tombo-support) and  [`move_table`](#move_table-support)from nanopore basecaller.
