@@ -2,7 +2,7 @@
 
 This quick start guide outlines the steps to use the nanoCEM command line for analyzing our example data, which consists
 of the _E. coli_ 23S rRNA around a known m6A site (A2030). nanoCEM will calculate alignment features and current event
-features within this target region.test
+features within this target region.
 
 
 ## Download the example data
@@ -55,7 +55,7 @@ script using our test data to visualize the alignment feature,
     # get alignment visualization 
     alignment_magnifier -i data/wt/file.fastq  -c data/ivt/file.fastq  \
     --chrom NR_103073.1 --pos 2030 --len 10 --strand + \
-    --rna --ref data/23S_rRNA.fasta --output nanoCEM_result
+    --rna --ref data/23S_rRNA.fasta --output nanoCEM_result_align
 
 Then nanoCEM will output the alignment feature table called [**alignment_feature.csv**](output_format.md#result-file-from-alignment_magnifier) and figure in
 your target region as below, **Sample** is from `-i` and **Control** is  `-c`
@@ -222,15 +222,15 @@ Then nanoCEM will output the current feature called [**current_feature.csv**](ou
 
 ## Single mode
 
-If you have only one sample and want to view specific regions of features, nanoCEM also provides a single mode, which supported all three
+If you have only one sample and want to view specific regions of features, nanoCEM also provides a single mode, which supported all four
 preprocessing method `f5c resquiggle`, `f5c eventalign`, `tombo` and `move_table`.
 
 For example,
 
     # run f5c mode
-    current_events_magnifier f5c_ev -i data/wt/file\
+    current_events_magnifier f5c_ev -i data/wt/file \
     --chrom NR_103073.1 --strand + --pos 2030 \
-    --ref data/23S_rRNA.fasta -o nanoCEM_result \
+    --ref data/23S_rRNA.fasta -o nanoCEM_result_single_mode \
     --base_shift --rna --norm
 
 And the single mode will output the feature table and feature plot like blow,
